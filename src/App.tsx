@@ -1,4 +1,4 @@
-﻿import "./App.css"
+﻿import styles from "./App.module.css"
 import { useEffect, useMemo, useState } from "react"
 import { Navbar } from "./components/Navbar"
 import { Profile } from "./components/Profile"
@@ -30,9 +30,9 @@ function App() {
   const content = defaultContent
 
   return (
-    <div className="App">
+    <div className={styles.app}>
       <Navbar theme={theme} onToggle={() => setTheme(theme === "dark" ? "light" : "dark")} />
-      <main>
+      <main className={styles.main}>
         <Profile data={content.profile} />
         <About data={content.about} />
         <Experience data={content.experience} />

@@ -1,4 +1,5 @@
 ﻿import React from "react"
+import styles from "../App.module.css"
 
 type ProfileData = {
   name: string
@@ -11,23 +12,30 @@ type ProfileData = {
 
 export const Profile: React.FC<{ data: ProfileData }> = ({ data }) => {
   return (
-    <section id="top" className="section profile">
-      <div className="container profile-container">
-        <div className="profile-copy">
-          <p className="eyebrow">{data.title}</p>
-          <div className="profile-heading">
-            <h1 className="headline">{data.name}</h1>
+    <section id="top" className={`${styles.section} ${styles.profile}`}>
+      <div className={`${styles.container} ${styles.profileContainer}`}>
+        <div className={styles.profileCopy}>
+          <p className={styles.eyebrow}>{data.title}</p>
+          <div className={styles.profileHeading}>
+            <h1 className={styles.headline}>{data.name}</h1>
             {data.image ? (
-              <img className="profile-avatar" src={data.image} alt={data.imageAlt ?? `${data.name} portrait`} />
+              <img
+                className={styles.profileAvatar}
+                src={data.image}
+                alt={data.imageAlt ?? `${data.name} portrait`}
+              />
             ) : null}
           </div>
-          <p className="summary">{data.summary}</p>
-          <div className="actions">
-            {data.actions.map((a) => (
-              <a key={a.label} className={`btn ${a.variant ?? "primary"}`} href={a.href}>
-                {a.label}
-              </a>
-            ))}
+          <p className={styles.summary}>{data.summary}</p>
+          <div className={styles.actions}>
+            {data.actions.map((a) => {
+              const variantClass = a.variant === "secondary" ? styles.btnSecondary : styles.btnPrimary
+              return (
+                <a key={a.label} className={`${styles.btn} ${variantClass}`} href={a.href}>
+                  {a.label}
+                </a>
+              )
+            })}
           </div>
         </div>
       </div>
