@@ -74,8 +74,8 @@ export const content = {
     email: "jtstanners@gmail.com",
     location: "Tucson, Arizona",
     socials: [
-      { label: "LinkedIn", href: "www.linkedin.com/in/jeramey-stanners-901162248" },
-      { label: "GitHub", href: "https://github.com/jtstanners" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/jeramey-stanners-901162248" },
+      { label: "GitHub", href: "https://www.github.com/jtstanners" },
     ],
   },
 }

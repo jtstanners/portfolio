@@ -1,11 +1,10 @@
-import React from "react"
+﻿import React from "react"
 import styles from "../App.module.css"
 
 export type EducationItem = {
   degree: string
   school: string
   period: string
-  details: string[]
 }
 
 export const Education: React.FC<{ data: EducationItem[] }> = ({ data }) => {
@@ -27,13 +26,6 @@ export const Education: React.FC<{ data: EducationItem[] }> = ({ data }) => {
                   </h3>
                   {item.period && <span className={styles.period}>{item.period}</span>}
                 </div>
-                {!!item.details.length && (
-                  <ul className={styles.bullets}>
-                    {item.details.map((detail, detailIdx) => (
-                      <li key={detailIdx}>{detail}</li>
-                    ))}
-                  </ul>
-                )}
               </div>
             </li>
           ))}
