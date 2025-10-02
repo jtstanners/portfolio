@@ -40,7 +40,7 @@ export const content = {
       description:
         "Designed and developed a Discord bot in Python (discord.py) integrated with the Riot Games API to validate accounts, track player activity, and fetch live match data. Implemented user registration with input validation, JSON-based data persistence, and background tasks to detect when users entered a League of Legends match, automatically sending recommended champion builds. Integrated Riot Data Dragon API to map champion IDs to human-readable names, enhancing user experience.",
       tags: ["Python", "Discord.py", "Integrated APIs"],
-      links: [{ label: "GitHub", href: "https://github.com/yourname/project-two" }],
+      //links: [{ label: "GitHub", href: "https://github.com/yourname/project-two" }],
     },
   ] as Project[],
   experience: [
